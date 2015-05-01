@@ -12,5 +12,3 @@ notifications:
 branches:
   only:
     - master
-
-script: ./gradle build -x test
