@@ -24,3 +24,10 @@ task installArchives(type: Upload) {
     }
   }
 }
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  testCompile 'junit:junit:4.11'
+
+}
+
