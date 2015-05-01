@@ -9,4 +9,8 @@ android:
 notifications:
     email: false
 
+branches:
+  only:
+    - master
+
 script: gradle clean installDebug
