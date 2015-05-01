@@ -1,15 +1,14 @@
 language: android
-
-android:
+  android:
     components:
       - build-tools-21.1.2
       - android-21
       - extra
 
-notifications:
+  notifications:
     email: false
 
-before_install:
+  before_install:
 
     # for gradle output style
     - export TERM=dumb
@@ -17,3 +16,6 @@ before_install:
     # environment info
     - ./gradlew -v
     - uname -a
+
+  # Let's try to build...
+  script: ./gradle clean build
