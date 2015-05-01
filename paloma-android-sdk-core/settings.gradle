@@ -1,0 +1,2 @@
+include 'sdk-core-library'
+include 'core-sample-app'
