@@ -7,7 +7,9 @@ android:
       - extra
 
 notifications:
-    email: false
+  email:
+    - karel@palomamobile.com
+    - nisha@palomamobile.com
 
 branches:
   only:
