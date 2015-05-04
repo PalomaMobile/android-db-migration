@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DB Migration Sample App</string>
+    <string name="title_activity_main">Schema Migration</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

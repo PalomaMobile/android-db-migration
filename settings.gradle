@@ -1,2 +1,2 @@
-include 'sdk-core-library'
-include 'core-sample-app'
+include 'android-db-migration-library'
+include 'android-db-migration-sample-app'
