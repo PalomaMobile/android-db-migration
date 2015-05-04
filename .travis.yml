@@ -8,8 +8,11 @@ android:
 
 notifications:
   email:
-    - karel@palomamobile.com
-    - nisha@palomamobile.com
+    recipients:
+      - karel@palomamobile.com
+      - nisha@palomamobile.com
+    on_success: [always|never|change] # default: always
+    on_failure: [always|never|change] # default: always
 
 branches:
   only:
