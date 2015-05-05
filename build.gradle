@@ -15,7 +15,7 @@ allprojects {
 
 subprojects {
     version = "1.0.0-SNAPSHOT"
-    group = "com.paloma"
+    group = "com.palomamobile"
 
     repositories {
         mavenCentral()
