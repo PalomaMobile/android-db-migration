@@ -1,22 +1,23 @@
 language: android
-
 android:
-    components:
-      - build-tools-21.1.2
-      - android-21
-      - extra
-
+  components:
+  - build-tools-21.1.2
+  - android-21
+  - extra
 notifications:
   email:
     recipients:
-      - karel@palomamobile.com
-      - nisha@palomamobile.com
+    - karel@palomamobile.com
+    - nisha@palomamobile.com
     on_success: always
     on_failure: always
-
 branches:
   only:
-    - master
+  - master
+env:
+  global:
+  - secure: K59xABSIqQhlVJpsQkVGyxntdy8blTUvqGNSM7CLD9qy9WVs2aRPtLDuTBy/qcmEV9Z3JA2yy9PXD8k3P0un0E9Jky4dfcL00/oLAEEQGH2BodOy4Ed6NWepBSN2+JgFkfqfzEjgcv881PB7Q5W9/8nX1KEeNu0Q++vrrgYsI+g=
+  - secure: Hw+4/XyRm3UsqaRUmvhfx8eekZs/rT3Jo3iOGs0rxoPr38PcPDiT9H5jUn3fPrUY6XLU671i2A1xLLrPwB5fTmVcebWBlId4XloV+fspVz/5boxcR/POYJA4LmW1ZmMp2QQwcQO8885HIrxF/W+97avPDug0NFk0JRXRb0d0BB0=
 
 after_success:
-  - gradle uploadArchives -PnexusUsername="${env.OSSRH_USER}" -PnexusPassword="${env.OSSRH_PASS}"
+ - gradle uploadArchives -PnexusUsername="K59xABSIqQhlVJpsQkVGyxntdy8blTUvqGNSM7CLD9qy9WVs2aRPtLDuTBy/qcmEV9Z3JA2yy9PXD8k3P0un0E9Jky4dfcL00/oLAEEQGH2BodOy4Ed6NWepBSN2+JgFkfqfzEjgcv881PB7Q5W9/8nX1KEeNu0Q++vrrgYsI+g=" -PnexusPassword="Hw+4/XyRm3UsqaRUmvhfx8eekZs/rT3Jo3iOGs0rxoPr38PcPDiT9H5jUn3fPrUY6XLU671i2A1xLLrPwB5fTmVcebWBlId4XloV+fspVz/5boxcR/POYJA4LmW1ZmMp2QQwcQO8885HIrxF/W+97avPDug0NFk0JRXRb0d0BB0="
