@@ -19,4 +19,4 @@ branches:
     - master
 
 after_success:
-  - gradle uploadArchives
+  - gradle uploadArchives -PnexusUsername="${env.OSSRH_USER}" -PnexusPassword="${env.OSSRH_PASS}"
