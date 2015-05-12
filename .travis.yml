@@ -17,3 +17,6 @@ notifications:
 branches:
   only:
     - master
+
+after_success:
+  - gradle uploadArchives
