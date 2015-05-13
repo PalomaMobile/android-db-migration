@@ -16,7 +16,12 @@ branches:
   - master
 after_success:
 - gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}"
+  -Psigning.keyId="${MAVEN_CENTRAL_SIGN_KEY}" -Psigning.password="${MAVEN_CENTRAL_SIGN_PASSWORD}"
+  -Psigning.secretKeyRingFile="${SECRET_KEY_RING_FILE_PASSWORD}"
 env:
   global:
   - secure: G6BrxbLL0s1iGrvE0RmFTER1sD+xdy/6C0qvtjtJ94b1qC6xaXNUrLxdR3RUafrrpNTeMkM0Skn2XO6kGGbVlKzFwXdcMIBFf098bbg9pCly2C1P8D9KZJFsKiAegitaahuGgXKCc57J2vf7blg0dKh4b20S4vhl3G1XIMQmxV0=
   - secure: dZcK5+wwI7CxoYCytcqngjZd4cxs7upoN+plKA7CpTA1OAdUGLFuQzBrdQAR5dSAx2+KonTXY9YNBd+rxK3wkYMD0WS3/iDooqxyK0BgnGqhkJycZkdT83iwUCTaPk2UVMRuF4f/ztYxp8aXBmVGzFD/tE+/9TpZPp5gr2vc3b4=
+  - secure: Enw3aq32gsMCSjzsyi0xrftDKmG0or9YF1DXnKQil7vde3Mw8Ki4OB2z2lBzg0XM4MHGWzMlhCOyrYnNtN0mx9LuTeaCPp0lnyZV+F5azgxU+pmLnn3sEcRfEOme+lhIT8hvP989o1Tc315x7FBoFh98BaLFDqD1hi0yPoK5QzQ=
+  - secure: PsC7Cvb5iRmo0+EDvy1vs/f2kOJaRjWPg7P8VLYhoOuGERFPEO6lt6hyk8UneryBkvgVwR59t7LZgw+bt9oA8pL97WjbloETJe8N9NFgh/fZx5QkHZl2nCT4gZCa5HOfOIcPaK10HakTwfDTZzlLoqQJX8lNWAR4P2o+Nf3zeis=
+  - secure: Azpci9ojJKNJS/sV2Lj55kZDd/cBtG2ilOO0Dumec5+vhS7J9f4i8pzlRJhKb7jHQRWnIsBuOcVc0rGcUBtw2ik9++M5Yk/rWHcYVjQhpUwWEBViHzntfzrfesobD0DqLfBWfuZROdzkTiqXOkAQfSFjkKuEmWXkp7W/4+bDORA=
