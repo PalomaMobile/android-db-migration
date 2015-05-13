@@ -26,4 +26,4 @@ env:
   - secure: PsC7Cvb5iRmo0+EDvy1vs/f2kOJaRjWPg7P8VLYhoOuGERFPEO6lt6hyk8UneryBkvgVwR59t7LZgw+bt9oA8pL97WjbloETJe8N9NFgh/fZx5QkHZl2nCT4gZCa5HOfOIcPaK10HakTwfDTZzlLoqQJX8lNWAR4P2o+Nf3zeis=
   - secure: Azpci9ojJKNJS/sV2Lj55kZDd/cBtG2ilOO0Dumec5+vhS7J9f4i8pzlRJhKb7jHQRWnIsBuOcVc0rGcUBtw2ik9++M5Yk/rWHcYVjQhpUwWEBViHzntfzrfesobD0DqLfBWfuZROdzkTiqXOkAQfSFjkKuEmWXkp7W/4+bDORA=
 before_install:
-  - echo $SECRET_KEY_RING_FILE_PASSWORD | gpg --passphrase-fd 0 android-db-migration/secring.gpg.gpg
+  - echo $SECRET_KEY_RING_FILE_PASSWORD | gpg --passphrase-fd 0 secring.gpg.gpg
