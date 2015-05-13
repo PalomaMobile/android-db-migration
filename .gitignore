@@ -37,3 +37,6 @@ gradle-app.setting
 *.iml
 
 project.properties
+
+#gpg private key
+secring.gpg
