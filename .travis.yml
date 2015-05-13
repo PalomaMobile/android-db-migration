@@ -14,10 +14,9 @@ notifications:
 branches:
   only:
   - master
+after_success:
+- gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}"
 env:
   global:
-  - secure: K59xABSIqQhlVJpsQkVGyxntdy8blTUvqGNSM7CLD9qy9WVs2aRPtLDuTBy/qcmEV9Z3JA2yy9PXD8k3P0un0E9Jky4dfcL00/oLAEEQGH2BodOy4Ed6NWepBSN2+JgFkfqfzEjgcv881PB7Q5W9/8nX1KEeNu0Q++vrrgYsI+g=
-  - secure: Hw+4/XyRm3UsqaRUmvhfx8eekZs/rT3Jo3iOGs0rxoPr38PcPDiT9H5jUn3fPrUY6XLU671i2A1xLLrPwB5fTmVcebWBlId4XloV+fspVz/5boxcR/POYJA4LmW1ZmMp2QQwcQO8885HIrxF/W+97avPDug0NFk0JRXRb0d0BB0=
-
-after_success:
- - gradle uploadArchives -PnexusUsername="K59xABSIqQhlVJpsQkVGyxntdy8blTUvqGNSM7CLD9qy9WVs2aRPtLDuTBy/qcmEV9Z3JA2yy9PXD8k3P0un0E9Jky4dfcL00/oLAEEQGH2BodOy4Ed6NWepBSN2+JgFkfqfzEjgcv881PB7Q5W9/8nX1KEeNu0Q++vrrgYsI+g=" -PnexusPassword="Hw+4/XyRm3UsqaRUmvhfx8eekZs/rT3Jo3iOGs0rxoPr38PcPDiT9H5jUn3fPrUY6XLU671i2A1xLLrPwB5fTmVcebWBlId4XloV+fspVz/5boxcR/POYJA4LmW1ZmMp2QQwcQO8885HIrxF/W+97avPDug0NFk0JRXRb0d0BB0="
+  - secure: G6BrxbLL0s1iGrvE0RmFTER1sD+xdy/6C0qvtjtJ94b1qC6xaXNUrLxdR3RUafrrpNTeMkM0Skn2XO6kGGbVlKzFwXdcMIBFf098bbg9pCly2C1P8D9KZJFsKiAegitaahuGgXKCc57J2vf7blg0dKh4b20S4vhl3G1XIMQmxV0=
+  - secure: dZcK5+wwI7CxoYCytcqngjZd4cxs7upoN+plKA7CpTA1OAdUGLFuQzBrdQAR5dSAx2+KonTXY9YNBd+rxK3wkYMD0WS3/iDooqxyK0BgnGqhkJycZkdT83iwUCTaPk2UVMRuF4f/ztYxp8aXBmVGzFD/tE+/9TpZPp5gr2vc3b4=
