@@ -17,7 +17,7 @@ branches:
 after_success:
 - gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}"
   -Psigning.keyId="${MAVEN_CENTRAL_SIGN_KEY}" -Psigning.password="${MAVEN_CENTRAL_SIGN_PASSWORD}"
-  -Psigning.secretKeyRingFile=secring.gpg.gpg
+  -Psigning.secretKeyRingFile=secring.gpg
 env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
