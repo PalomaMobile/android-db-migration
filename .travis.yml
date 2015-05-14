@@ -18,3 +18,12 @@ after_success:
 - gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}"
   -Psigning.keyId="${MAVEN_CENTRAL_SIGN_KEY}" -Psigning.password="${MAVEN_CENTRAL_SIGN_PASSWORD}"
   -Psigning.secretKeyRingFile=secring.gpg.enc
+env:
+  global:
+  - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
+  - secure: 3dV29dGnJM9qicLNBwoLWB+WXpZPpa7jjJUY/nKPyLXjT33+fLLzvMABb+0bFDWTy40PmeiKtRHeidx5dUCgcozHueoF8LF56eT3ePqypGCVLQdbSJ5cCJMoxk/+CxC0YRGA9mUlzwt95vqv64FfZC/RzfwoNZ9u17HCLWzm7t8=
+  - secure: Hlkef/sPRsjGC+w0CBXimPu4Lt31pgV4i8dGRZ0MZ0g0Lfw6AEf6oMbHjsESUdtO6qyjD6fLIl8GEdBDUunZZHSbDRciqK8DG2e++vXy/Mp1CVGY6rR/qKLs9jzWwCjFk6Z87T2LYhQwXDkOjAdwdP6OTzBQ892kIS6I2hGHFbE=
+  - secure: KD5nUjb1Qoy2pCWPVM/Q5u+HzChXqXk2IJFghMJqJO+O8MIuVxmpdv9F1ttEC/1XfLMI9xmtY0CayHrNfbwMjQVFMtmu6FzDh6TLLQQALdpXVk/1rqffS18JisK+wjXbYf/fqHxQmH368BMun6SbdAayO/ko08AvEHbSEyuqRw4=
+before_install:
+- openssl aes-256-cbc -K $encrypted_99035b29b4ed_key -iv $encrypted_99035b29b4ed_iv
+  -in secring.gpg.enc -out secring.gpg -d
