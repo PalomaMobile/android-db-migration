@@ -9,7 +9,7 @@ notifications:
     recipients:
     - karel@palomamobile.com
     - nisha@palomamobile.com
-    on_success: always
+    on_success: never
     on_failure: always
 branches:
   only:
