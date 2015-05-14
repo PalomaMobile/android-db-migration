@@ -21,6 +21,10 @@ allprojects {
     }
 }
 
+task getVersion << {
+    println version
+}
+
 /*subprojects {
     version = "1.0.0-SNAPSHOT"
     group = "com.palomamobile"
