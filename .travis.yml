@@ -25,4 +25,5 @@ env:
   - secure: Enw3aq32gsMCSjzsyi0xrftDKmG0or9YF1DXnKQil7vde3Mw8Ki4OB2z2lBzg0XM4MHGWzMlhCOyrYnNtN0mx9LuTeaCPp0lnyZV+F5azgxU+pmLnn3sEcRfEOme+lhIT8hvP989o1Tc315x7FBoFh98BaLFDqD1hi0yPoK5QzQ=
   - secure: PsC7Cvb5iRmo0+EDvy1vs/f2kOJaRjWPg7P8VLYhoOuGERFPEO6lt6hyk8UneryBkvgVwR59t7LZgw+bt9oA8pL97WjbloETJe8N9NFgh/fZx5QkHZl2nCT4gZCa5HOfOIcPaK10HakTwfDTZzlLoqQJX8lNWAR4P2o+Nf3zeis=
 before_install:
+    openssl aes-256-cbc -K $encrypted_99035b29b4ed_key -iv $encrypted_99035b29b4ed_iv -in secring.gpg.enc -out secring.gpg -d
 
