@@ -31,4 +31,6 @@ deploy:
   file: dbMigrationLib*.aar
   skip_cleanup: true
   on:
+    repo: PalomaMobile/android-db-migration
     tags: false
+    all_branches: true
