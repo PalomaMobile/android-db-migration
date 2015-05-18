@@ -23,7 +23,7 @@ deploy:
   provider: releases
   api-key:
       secure: cUZyOMWzC9ybVR7Yic6tmdA7RJp3tDn9m+I9M5zzozDs7QJYc5fGYt1lSSWEVOB7DEVXFUYJWR7q4wbcQOhLkDIr4aEWCBmmmuDeItV7jmtavsJzpbprGDJm2zbLl/jO66lAJLz8/15Xq0mdmPpaoSCCe2H3YwxHBB+8dod6eIg=
-  file: dbMigrationLib*.aar
+  file: dbMigrationLib-4.0-SNAPSHOT.aar
   skip_cleanup: true
   on:
     repo: PalomaMobile/android-db-migration
