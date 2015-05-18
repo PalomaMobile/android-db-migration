@@ -18,17 +18,19 @@ env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
   - secure: 3dV29dGnJM9qicLNBwoLWB+WXpZPpa7jjJUY/nKPyLXjT33+fLLzvMABb+0bFDWTy40PmeiKtRHeidx5dUCgcozHueoF8LF56eT3ePqypGCVLQdbSJ5cCJMoxk/+CxC0YRGA9mUlzwt95vqv64FfZC/RzfwoNZ9u17HCLWzm7t8=
-  - secure: w7jyTh6RdAY4t4Nj1KD3cn39mn5ak5AjDdbOhIL5otJX480rodq4nFIZsGD505YxBmh03t8NwJ79NR7HJsNrOddLuyXyofr1Ni6vmuFMVwzXqk8rcdvtwMG9GXIj0DYo9eMVR68kc1VKqKEQDDk1xKyp0BB2wtY545a/gHW2idI=
+  - secure: tV8ODJOaDtiXukN2PENDo+e7hJecMxjuD8SGpopOfiAuCx7sr+x7GuFLiKCZnXC5rFMpQFDRXu3vSag9mJSxOSld5he4SeWBi+MV3XAdeGl09L9of7++rqrsAgzvxgTYMigMj4u1ZBuYsybgSX0Q79cDzbH2tBg9XaSeJwo6Thw=
 before_install:
 - chmod a+x .utility/initiate-publish.sh
 after_success:
 - ".utility/initiate-publish.sh"
 deploy:
   provider: releases
-  user: "${GITHUBUSERNAME}"
+  user: "${GITHUB_USERNAME}"
   password:
-      secure: yR4OTVPf1qwM5XcwtH0KaUzB3RSspJARwSJL+XYefxb1764Xbptmr3AaRxqrkI4r+819r9Br7JLDjulNnyBvlCb8551V2a8hyD2gGGkG4HA/Rv961RcT1d3Avrx+LR8vFrH89lzfxABL5WFufTSX2lYLnmDaurmCFJQ/Tz72xMQ=
+    secure: wB1e13E2H7xlQfZEqa39inwMGLKrqOrxgCu2RFkMRwOExoYy91RKnM30aBuovxTRuftcRZq5//IyQPNFiysYy02y+VEQVFkQnQb0/JgG3vdK/CCDIm2EQ8qMTc6HrV3C6xphNhHrx57V9B9E8IoTzz7s4J/vf4wcu/xkX6kfHuU=
   file: dbMigrationLib*.aar
   skip_cleanup: true
   on:
+    repo: PalomaMobile/android-db-migration
     tags: false
+    all_branches: true
