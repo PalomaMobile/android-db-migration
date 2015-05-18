@@ -18,17 +18,7 @@ env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
   - secure: 3dV29dGnJM9qicLNBwoLWB+WXpZPpa7jjJUY/nKPyLXjT33+fLLzvMABb+0bFDWTy40PmeiKtRHeidx5dUCgcozHueoF8LF56eT3ePqypGCVLQdbSJ5cCJMoxk/+CxC0YRGA9mUlzwt95vqv64FfZC/RzfwoNZ9u17HCLWzm7t8=
-  - secure: uvKZb6xq2BFHIX2EvDS+KnP+Jhxkqw/wwbwJ3X9x6BKNMKN599v1RkWkMHtftzCHVzSaXVgCz9JRdH8BPqC4RH8eua7Jh7fEtjyLv1LPcnkdmRwhknjSSmZlJPTkJSOcGgkku7fcokRrIj11f/TJ027wyhvxMJ9auGgSi9d4p+4=
-  - secure: ad+1ldtydby/nzbDSZ/ZppTo5t2QRBjwpJNjnCoVwIvi0NkD0PLZcan7kDdYw5lT4/wwtoLAyVwZfTLYqf5amZ6H9QiYjDZVDSIsNZH45QV4TDFY+bF23jFP4LUp0SeOU02DzPbi4iUeXwkXGYwwov2+dcSeBUkWCNu+yrdC2/M=
 before_install:
-- chmod a+x .utility/initiate-publish.sh
+ - chmod a+x .utility/initiate-publish.sh
 after_success:
 - ".utility/initiate-publish.sh"
-deploy:
-  provider: releases
-  user: "${GITUSERNAME}"
-  password: "${GITPASSWORD}"
-  file: dbMigrationLib*.aar
-  skip_cleanup: true
-  on:
-    tags: true
