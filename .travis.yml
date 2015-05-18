@@ -11,9 +11,6 @@ notifications:
     - nisha@palomamobile.com
     on_success: never
     on_failure: always
-branches:
-  only:
-  - master
 env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
@@ -29,4 +26,6 @@ deploy:
   file: dbMigrationLib*.aar
   skip_cleanup: true
   on:
+    repo: PalomaMobile/android-db-migration
     tags: true
+    all_branches: true
