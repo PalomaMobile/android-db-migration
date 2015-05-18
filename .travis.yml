@@ -27,7 +27,7 @@ deploy:
   provider: releases
   user: "${GITHUB_USERNAME}"
   password:
-    secure: wB1e13E2H7xlQfZEqa39inwMGLKrqOrxgCu2RFkMRwOExoYy91RKnM30aBuovxTRuftcRZq5//IyQPNFiysYy02y+VEQVFkQnQb0/JgG3vdK/CCDIm2EQ8qMTc6HrV3C6xphNhHrx57V9B9E8IoTzz7s4J/vf4wcu/xkX6kfHuU=
+    secure: KpoVhPu1h1NB/iVfxMSOTpXVSnyjmTdc4eYmELc33E7aBjOnj5flEu9/u6iNjedWyYBi5Tc5vyAc39mGYjnuQ+iSwZ0GJ0NtUBNzphMvsacFlnygpa/s3XAE7Tv/2dwLSYIti0lF4qaWlDkZLTT0pHPZkY4H4WhCK/o3297XelM=
   file: dbMigrationLib*.aar
   skip_cleanup: true
   on:
