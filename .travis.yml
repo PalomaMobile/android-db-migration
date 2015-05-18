@@ -11,6 +11,9 @@ notifications:
     - nisha@palomamobile.com
     on_success: never
     on_failure: always
+branches:
+  only:
+  - master
 env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
@@ -19,13 +22,4 @@ before_install:
 - chmod a+x .utility/initiate-publish.sh
 after_success:
 - ".utility/initiate-publish.sh"
-deploy:
-  provider: releases
-  api-key:
-      secure: cUZyOMWzC9ybVR7Yic6tmdA7RJp3tDn9m+I9M5zzozDs7QJYc5fGYt1lSSWEVOB7DEVXFUYJWR7q4wbcQOhLkDIr4aEWCBmmmuDeItV7jmtavsJzpbprGDJm2zbLl/jO66lAJLz8/15Xq0mdmPpaoSCCe2H3YwxHBB+8dod6eIg=
-  file: dbMigrationLib-4.0-SNAPSHOT.aar
-  skip_cleanup: true
-  on:
-    repo: PalomaMobile/android-db-migration
-    tags: true
-    all_branches: true
+
