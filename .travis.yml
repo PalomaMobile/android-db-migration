@@ -29,4 +29,4 @@ deploy:
   file: dbMigrationLib*.aar
   skip_cleanup: true
   on:
-    tags: false
+    tags: true
