@@ -23,7 +23,7 @@ env:
   - secure: mGUWF8+ikQ3yn1W6T8vUQvWqrdABLmpmaMUGz/q10PTsTWdJpGRSTLg9GeYHbP1tO2XYjU+uBu+3PYJ05lmoJdVND9X3p8FdnBN1+8yad1jBbb4V35MapyAZHBKFDp/qP3k5uJvdFhooJcSwCgH4LrfLRrmVgGAxGmMV2x5zcAk=
 before_install:
 - chmod a+x .utility/initiate-publish.sh
-- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/secring.gpg.enc -out .utility/local.secring.gpg -d
-- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/pubring.gpg.enc -out .utility/local.pubring.gpg -d
+- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/secring.gpg.enc -out .utility/generated.secring.gpg -d
+- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/pubring.gpg.enc -out .utility/generated.pubring.gpg -d
 after_success:
 - ".utility/initiate-publish.sh"
