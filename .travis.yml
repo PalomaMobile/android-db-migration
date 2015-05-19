@@ -25,8 +25,5 @@ before_install:
 - chmod a+x initiate-publish.sh
 - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in secring.gpg.enc -out local.secring.gpg -d
 - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in pubring.gpg.enc -out local.pubring.gpg -d
-deploy:
-  provider: releases
-  skip_cleanup: true
 after_success:
 - "./initiate-publish.sh"
