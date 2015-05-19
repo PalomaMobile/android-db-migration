@@ -38,5 +38,6 @@ gradle-app.setting
 
 project.properties
 
-#gpg private key
-secring.gpg
+#gpg local files
+local.pubring.gpg
+local.secring.gpg

@@ -18,8 +18,12 @@ env:
   global:
   - secure: P0VHafLj2m85eeAAuisSOOc5S3QjFFOHhFiqM7ylGhL99Jqr4+uK4O6OxXEG0saaaM/VRe+5uJEWfk/pL49Wwp67gp4F9if10IwchajSfmR6vf/d6joRmlqQol8DiR3gnQ/mmWEwJoXCbnz4bckqmcXxJHt85Qrv0p5DjFLgw1g=
   - secure: 3dV29dGnJM9qicLNBwoLWB+WXpZPpa7jjJUY/nKPyLXjT33+fLLzvMABb+0bFDWTy40PmeiKtRHeidx5dUCgcozHueoF8LF56eT3ePqypGCVLQdbSJ5cCJMoxk/+CxC0YRGA9mUlzwt95vqv64FfZC/RzfwoNZ9u17HCLWzm7t8=
+  - secure: sSIKHLIXTzn2Bks3EIybH8MkQzVMTVtl1gjwG92VAOUOp8aq3UvpTcikA5GgIZWlp8WqXGFma4yt3CwKwpeou3s4gGkr2HVamlXD37/zeNjqkiEaOswRPsW09M4jXPb4EmTCh+REdx1cxqX392qtc0gFUyZ4nbW/l/Uffl1CIvs=
+  - secure: BBOFqW47kXuC+EYQL8RJvltWTHB9L3C5t9cyHIVVub1lGvV2HcdqXuSAs+Tk/m3ZcYUOMqUjoo94u5jCLI18eBwzfNCyOTXh/JWiCk5NYqd0ifetrKbQTorIul7XjPhaSl7aHJYFi5Gh3wI/YvsQDtFzzMbP+GZHhV4FYYTcH0A=
+  - secure: jYCt7rlIPwWfmgP1ldLn7XWtFV5ZFFfCdtMeYaP1dupi5fXJzgvjjupNb1sDNRg0bn892p//akxV9aeSlimMUsM4RklF28CxqR/grQb/S6+I1tRFdre0qkdOUMPu2M0CO4idjqO6fJ+E7siFP3BMwMckHmSaIgjmQponmJaTGSo=
 before_install:
 - chmod a+x .utility/initiate-publish.sh
+- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in secring.gpg.enc -out local.secring.gpg -d
+- openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in pubring.gpg.enc -out local.pubring.gpg -d
 after_success:
 - ".utility/initiate-publish.sh"
-
