@@ -7,7 +7,7 @@ if [ "$TRAVIS_REPO_SLUG" == "PalomaMobile/android-db-migration" ] && [ "$TRAVIS_
 
     echo -e "Starting to publish release to Sonatype...\n"
 
-      gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}" -Psigning.keyId="${SIGN_KEYID}" -Psigning.password="${SIGN_PASSWORD}" -Psigning.secretKeyRingFile=./local.secring.gpg
+      gradle uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}" -Psigning.keyId="${SIGN_KEYID}" -Psigning.password="${SIGN_PASSWORD}" -Psigning.secretKeyRingFile="./local.secring.gpg"
       RETVAL=$?
 
       if [ $RETVAL -eq 0 ]; then
