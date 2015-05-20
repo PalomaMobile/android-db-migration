@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/PalomaMobile/android-db-migration.svg)](https://travis-ci.org/PalomaMobile/android-db-migration)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib)
 
 # android-db-migration
 Android client library to help manage database migrations.
