@@ -29,7 +29,6 @@ For a complete look at our labels, see the [project labels page](https://github.
 ## Bug reports
 
 A bug is a _demonstrable problem_ that is caused by the code in the repository.
-Good bug reports are extremely helpful, so thanks!
 
 Please try to be as detailed as possible in your report. What is
 your environment? What steps will reproduce the issue? What
@@ -40,8 +39,7 @@ any potential bugs.
 ## Feature requests
 
 Feature requests are welcome. But take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to *you* to make a strong
-case to convince the project's developers of the merits of this feature. Please
+fits with the scope and aims of the project. Please
 provide as much detail and context as possible.
 
 
@@ -57,7 +55,7 @@ forking the repository and sending a pull request.
 When submitting code, please make every effort to follow existing conventions and style
 in order to keep the code as readable as possible. Please also make sure your code compiles.
 
-Before your code can be accepted into the project you must also sign
-the Individual Contributor License Agreement (CLA).
+Before your code can be accepted into the project you must also sign the
+[Individual Contributor License Agreement (CLA)][1].
 
 
