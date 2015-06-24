@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Android-db-migration by PalomaMobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Android-db-migration</h1>
+      <h2 class="project-tagline">Android client library to help manage database migrations.</h2>
+      <a href="https://github.com/PalomaMobile/android-db-migration" class="btn">View on GitHub</a>
+      <a href="https://github.com/PalomaMobile/android-db-migration/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/PalomaMobile/android-db-migration/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://travis-ci.org/PalomaMobile/android-db-migration"><img src="https://travis-ci.org/PalomaMobile/android-db-migration.svg" alt="Build Status"></a>
+<a href="https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib"><img src="https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib/badge.svg" alt="Maven Central"></a>
+<a href="https://coveralls.io/r/PalomaMobile/android-db-migration"><img src="https://coveralls.io/repos/PalomaMobile/android-db-migration/badge.svg" alt="Coverage Status"></a></p>
+
+<h1>
+<a id="android-db-migration" class="anchor" href="#android-db-migration" aria-hidden="true"><span class="octicon octicon-link"></span></a>android-db-migration</h1>
+
+<p>Android client library to help manage database migrations.</p>
+
+<p>The android-db-migration project provides a library that eases the pains of upgrading database schemas in Android clients.</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Seamlessly upgrade multiple schema versions</li>
+<li>Verify DB schema upgrade integrity inside unit tests (i.e: detect if a migration script is missing for a particular schema version) </li>
+<li>Easy to integrate with manual DAO code or frameworks like GreenDAO</li>
+<li>Minimal overhead</li>
+</ul>
+
+<p>The project includes a sample app to get you started.</p>
+
+<h1>
+<a id="building-the-library" class="anchor" href="#building-the-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building the library</h1>
+
+<p>You can build from source via Gradle using the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Dependencies-Android-Libraries-and-Multi-project-setup">Android Tools Gradle Plugin</a>. 
+Building the library requires the Java 7 SDK and Android SDK.</p>
+
+<p>To build of all library .aar files and sample app .apk files run:</p>
+
+<p><code>gradle clean build</code></p>
+
+<p>To build and install library .aar files to your local maven repo run:</p>
+
+<p><code>gradle installLibraries</code></p>
+
+<p>To unit tests in VM during build run:</p>
+
+<p><code>gradle clean assembleDebug testDebug</code></p>
+
+<p>To execute tests (instrumentation or unit) on device run:</p>
+
+<p><code>gradle clean connectedAndroidTest</code></p>
+
+<h1>
+<a id="add-android-db-migration-library-to-your-project" class="anchor" href="#add-android-db-migration-library-to-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add android-db-migration library to your project</h1>
+
+<p>android-db-migration library is available on Maven Central.</p>
+
+<ul>
+<li>Please ensure that you are using the latest version by <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.palomamobile%22%20AND%20a%3A%22dbMigrationLib%22">checking here</a>
+</li>
+<li>Please get the latest dependency information by clicking on the Maven badge <a href="https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib"><img src="https://maven-badges.herokuapp.com/maven-central/com.palomamobile/dbMigrationLib/badge.svg" alt="Maven Central"></a>
+</li>
+</ul>
+
+<h1>
+<a id="bugs-and-feedback" class="anchor" href="#bugs-and-feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs and Feedback</h1>
+
+<p>For bugs, questions and discussions please use the <a href="https://github.com/PalomaMobile/android-db-migration/issues">Github Issues</a>.</p>
+
+<h1>
+<a id="attributions" class="anchor" href="#attributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributions</h1>
+
+<p>This implementation makes use of ideas discussed in an article by <a href="https://plus.google.com/u/0/+JeremyConnor/posts">Jeremy Connor</a>. The original article was <a href="http://www.androidanalyse.com/greendao-schema-migration/">here</a> but the link now appears broken.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/PalomaMobile/android-db-migration">Android-db-migration</a> is maintained by <a href="https://github.com/PalomaMobile">PalomaMobile</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
